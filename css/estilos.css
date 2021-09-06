@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/* Nuevas fuentes y cómo usarlas
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Teko', sans-serif;
+*/
+/* Todos los nombres en camelCase*/
+* {
+  Margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 15vh;
+  background-image: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
+}
+
+.header__titulo {
+  font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
+  color: darkblue;
+  font-weight: bold;
+}
+
+footer {
+  height: 10vh;
+  background-image: linear-gradient(to left, #d8e08d, #a2c88f, #93bf8c);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: unset;
+}
+
+nav {
+  text-align: right;
+  /* Separo los links del nav del borde superior */
+  padding-top: 10px;
+}
+
+nav a {
+  text-decoration: unset;
+  color: black;
+  font-size: 18px;
+  font-family: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* Separo los enlaces del nav entre si y del costado */
+  margin: 10px;
+  /* background-color: red; **fue de prueba para ver los efectos**/
+}
+
+/* Se agrega la alineación*/
+.parrafoInicio {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: bisque;
+  text-align: justify;
+}
+
+.parrafoProyectos {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  text-align: justify;
+}
+
+.h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blue;
+}
+
+.h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.h5 {
+  color: #2e2eff;
+}
+
+/* Se agregan imagenes de fondo. Faltaría mejorar los textos para que se vean mejor y en una mejor posición*/
+.fondoSeccion, .fondoSeccion--estudio, .fondoSeccion--novedades, .fondoSeccion--proyectos {
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.fondoSeccion--estudio {
+  background-image: url("/imagenes/inicio/estudio.jpeg");
+}
+
+.fondoSeccion--novedades {
+  background-image: url("/imagenes/inicio/novedades.jpeg");
+}
+
+.fondoSeccion--proyectos {
+  background-image: url("/imagenes/inicio/proyectos.jpeg");
+}
+
+.logo {
+  height: 100%;
+}
+
+/* Le pongo bordes a las secciones para que queden como en el sketch y después con flexbox ordenarlas*/
+.bordesInicio {
+  display: inline-block;
+  border: solid 5px black;
+  height: 100%;
+  /* Ocupa el 100% el padre*/
+  overflow: hidden;
+}
+
+.centrarEnCuadrado {
+  text-align: center;
+  padding-top: 4%;
+}
+
+.galeriaDeProyectos {
+  display: flex;
+  gap: 10px;
+  width: 100vh;
+  height: 50vh;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.imagenesGaleriaDeProyectos {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.ordenarNovedades {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#grillaEstudio {
+  display: grid;
+  grid-template-areas: "titulo titulo" "descripcion foto";
+  grid-template-rows: 25vh 50vh;
+  grid-template-columns: 60% 40%;
+  gap: 10px;
+}
+
+.tituloGrillaEstudio {
+  grid-area: titulo;
+  /* border: 5px solid black; */
+  align-self: center;
+}
+
+.parrafoGrillaEstudio {
+  grid-area: descripcion;
+}
+
+.fotoGrillaEstudio {
+  grid-area: foto;
+}
+
+#fotoGrillaEstudio_imagen {
+  width: 100%;
+  height: 100%;
+  padding-left: 20%;
+}
+
+/* Rotación ícono de la red social cuando pasa el cursor */
+.rotacionIconoRedSocial {
+  transition: transform 3s;
+}
+
+.rotacionIconoRedSocial:hover {
+  transform: rotateY(360deg);
+  /* transform: scale(1.25,1.25); */
+}
+
+/* ************ Mobile First ************ */
+@media (max-width: 768px) {
+  h1 {
+    font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
+    /* font-style: italic; */
+    color: darkblue;
+    text-align: center;
+    /*padding-top: 7%;*/
+  }
+  li {
+    display: inline;
+    /* display: inline-block; */
+    width: 10%;
+    text-align: center;
+    /*font-size: 14px*/
+  }
+  nav {
+    text-align: center;
+    /* Separo los links del nav del borde superior */
+    padding-top: 10px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+  /* Modifico para que quede uno abajo del otro*/
+  .bordesInicio {
+    display: block;
+    border: solid 3px black;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .fondoSeccion--proyectos {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .centrarEnCuadrado {
+    text-align: center;
+    padding-top: 4%;
+  }
+  /* A partir del uso de Bootstrap*/
+  /* Corrijo los tamaños del texto */
+  /* Corrijo los margin-bottom para que los bordes queden pegados */
+  ul, p, h3 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: .7rem;
+  }
+  /* Saco el margin para pantallas pequeñas en la galería */
+  .carousel {
+    margin: 0%;
+  }
+  .carousel-indicators {
+    margin: 0%;
+  }
+}
