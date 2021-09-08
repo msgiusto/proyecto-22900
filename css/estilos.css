@@ -97,15 +97,15 @@ nav a {
 }
 
 .fondoSeccion--estudio {
-  background-image: url("/imagenes/inicio/estudio.jpeg");
+  background-image: url("../imagenes/inicio/estudio.jpeg");
 }
 
 .fondoSeccion--novedades {
-  background-image: url("/imagenes/inicio/novedades.jpeg");
+  background-image: url("../imagenes/inicio/novedades.jpeg");
 }
 
 .fondoSeccion--proyectos {
-  background-image: url("/imagenes/inicio/proyectos.jpeg");
+  background-image: url("../imagenes/inicio/proyectos.jpeg");
 }
 
 .logo {

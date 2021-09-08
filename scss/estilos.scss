@@ -118,7 +118,7 @@ nav
     .fondoSeccion--#{$i}
     {
         @extend .fondoSeccion;
-        background-image: url("/imagenes/inicio/#{$i}.jpeg");
+        background-image: url("../imagenes/inicio/#{$i}.jpeg");
     }
 }
 
