@@ -1,0 +1,41 @@
+// Codigo correspondiente a los header
+
+.header
+{
+    height: 15vh;
+    background-image: $gradiente-principal;
+    &__titulo
+    {
+        font-family: $fuente-titulo-ppal;
+        color: $color-titulo-ppal;
+        font-weight: bold;
+    }
+}
+
+
+
+li
+{
+    display: inline;
+} 
+
+a
+{
+    text-decoration: unset;
+}
+
+nav
+{
+    text-align: right;
+    /* Separo los links del nav del borde superior */
+    padding-top: 10px;
+    a
+    {
+        text-decoration: unset;
+        color: black;
+        font-size: 18px;
+        font-family: $fuente-nav;
+        /* Separo los enlaces del nav entre si y del costado */
+        margin: 10px;
+    }
+}

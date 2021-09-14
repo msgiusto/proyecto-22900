@@ -1,0 +1,28 @@
+// Codigo correspondiente a los footer
+
+footer
+{
+    height: 10vh;
+    background-image: $gradiente-principal-invertido;
+    font-family: $fuente-footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    div
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* Rotación ícono de la red social cuando pasa el cursor */
+.rotacionIconoRedSocial
+{
+    transition: transform 3s;
+}
+
+.rotacionIconoRedSocial:hover
+{
+    transform: rotateY(360deg);
+}

@@ -6,36 +6,15 @@
     font-family: 'Teko', sans-serif;
 */
 /* Todos los nombres en camelCase*/
-* {
-  Margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .header {
   height: 15vh;
   background-image: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
 }
 
 .header__titulo {
-  font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
+  font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
   color: darkblue;
   font-weight: bold;
-}
-
-footer {
-  height: 10vh;
-  background-image: linear-gradient(to left, #d8e08d, #a2c88f, #93bf8c);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-footer div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 li {
@@ -56,25 +35,36 @@ nav a {
   text-decoration: unset;
   color: black;
   font-size: 18px;
-  font-family: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* Separo los enlaces del nav entre si y del costado */
   margin: 10px;
-  /* background-color: red; **fue de prueba para ver los efectos**/
 }
 
-/* Se agrega la alineación*/
-.parrafoInicio {
+footer {
+  height: 10vh;
+  background-image: linear-gradient(to left, #d8e08d, #a2c88f, #93bf8c);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: bisque;
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.parrafoProyectos {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-  text-align: justify;
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
+/* Rotación ícono de la red social cuando pasa el cursor */
+.rotacionIconoRedSocial {
+  transition: transform 3s;
+}
+
+.rotacionIconoRedSocial:hover {
+  transform: rotateY(360deg);
+}
+
+/* Estilos para los hx */
 .h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: blue;
@@ -88,7 +78,21 @@ nav a {
   color: #2e2eff;
 }
 
-/* Se agregan imagenes de fondo. Faltaría mejorar los textos para que se vean mejor y en una mejor posición*/
+/* Estilos para los párrafos */
+.parrafoInicio {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #dddd1f;
+  text-align: justify;
+}
+
+.parrafoProyectos {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  text-align: justify;
+}
+
+/* Estilos para el inicio */
+/* Se agregan imagenes de fondo en Secciones de inicio.*/
 .fondoSeccion, .fondoSeccion--estudio, .fondoSeccion--novedades, .fondoSeccion--proyectos {
   height: 25vh;
   background-repeat: no-repeat;
@@ -112,10 +116,10 @@ nav a {
   height: 100%;
 }
 
-/* Le pongo bordes a las secciones para que queden como en el sketch y después con flexbox ordenarlas*/
+/* Le pongo bordes a las secciones para que queden como en el sketch */
 .bordesInicio {
   display: inline-block;
-  border: solid 5px black;
+  border: solid 5px #b69b69;
   height: 100%;
   /* Ocupa el 100% el padre*/
   overflow: hidden;
@@ -126,63 +130,29 @@ nav a {
   padding-top: 4%;
 }
 
-.galeriaDeProyectos {
-  display: flex;
-  gap: 10px;
-  width: 100vh;
-  height: 50vh;
-  margin: 0 auto;
-  overflow-x: auto;
+/* Estilos para estudio */
+.estudio__main {
+  background-image: url(../videos/fondo-estudio.gif);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-attachment: fixed;
 }
 
-.imagenesGaleriaDeProyectos {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
+.estudio__parrafo {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.ordenarNovedades {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.div__estudio__destacado {
+  font-size: 20px;
+  background-color: #bde775;
+  opacity: 0.5;
 }
 
-#grillaEstudio {
-  display: grid;
-  grid-template-areas: "titulo titulo" "descripcion foto";
-  grid-template-rows: 25vh 50vh;
-  grid-template-columns: 60% 40%;
-  gap: 10px;
-}
-
-.tituloGrillaEstudio {
-  grid-area: titulo;
-  /* border: 5px solid black; */
-  align-self: center;
-}
-
-.parrafoGrillaEstudio {
-  grid-area: descripcion;
-}
-
-.fotoGrillaEstudio {
-  grid-area: foto;
-}
-
-#fotoGrillaEstudio_imagen {
-  width: 100%;
-  height: 100%;
-  padding-left: 20%;
-}
-
-/* Rotación ícono de la red social cuando pasa el cursor */
-.rotacionIconoRedSocial {
-  transition: transform 3s;
-}
-
-.rotacionIconoRedSocial:hover {
-  transform: rotateY(360deg);
-  /* transform: scale(1.25,1.25); */
+* {
+  Margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ************ Mobile First ************ */
@@ -240,5 +210,11 @@ nav a {
   }
   .carousel-indicators {
     margin: 0%;
+  }
+  /* Achico el tamaño de la letra en el parrafo en negrita*/
+  .estudio__parrafo {
+    font-weight: bold;
+    text-align: justify;
+    font-size: 12px;
   }
 }

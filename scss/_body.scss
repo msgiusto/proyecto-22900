@@ -1,0 +1,98 @@
+// Codigo correspondiente a los body
+
+/* Estilos para los hx */
+
+.h2
+{
+    font-family: $fuente-h23;
+    color: blue;
+}
+
+.h3
+{
+    font-family: $fuente-h23;
+}
+
+.h5
+{
+    color: $color-h5;
+}
+
+/* Estilos para los párrafos */
+.parrafoInicio
+{
+    font-family: $fuente-p-inicio;
+    color: $color-p-inicio;
+    text-align: justify;
+}
+
+.parrafoProyectos
+{
+    font-family: $fuente-p-inicio;
+    color: black;
+    text-align: justify;
+}
+
+/* Estilos para el inicio */
+/* Se agregan imagenes de fondo en Secciones de inicio.*/
+
+.fondoSeccion
+{
+    height: 25vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@each $i in estudio, novedades, proyectos
+{
+    .fondoSeccion--#{$i}
+    {
+        @extend .fondoSeccion;
+        background-image: url("../imagenes/inicio/#{$i}.jpeg");
+    }
+}
+
+.logo
+{
+    height: 100%;
+}
+
+/* Le pongo bordes a las secciones para que queden como en el sketch */
+
+.bordesInicio
+{
+    display: inline-block;
+    border: solid 5px $color-borde-inicio;
+    height: 100%; /* Ocupa el 100% el padre*/
+    overflow: hidden;
+}
+
+.centrarEnCuadrado
+{
+    text-align: center;
+    padding-top: 4%;
+}
+
+/* Estilos para estudio */
+
+.estudio__main
+{
+  background-image: $gif-fondo-estudio;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+.estudio__parrafo
+{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.div__estudio__destacado
+{
+  font-size: 20px;
+  background-color: $color-cuadroChico-estudio;
+  opacity: 0.5;
+}
