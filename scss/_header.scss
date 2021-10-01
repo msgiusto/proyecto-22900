@@ -1,5 +1,12 @@
 // Codigo correspondiente a los header
 
+*
+{
+    Margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 .header
 {
     height: 15vh;
@@ -11,8 +18,6 @@
         font-weight: bold;
     }
 }
-
-
 
 li
 {
@@ -38,4 +43,9 @@ nav
         /* Separo los enlaces del nav entre si y del costado */
         margin: 10px;
     }
+}
+
+.bg-light
+{
+  background: $gradiente-principal;
 }

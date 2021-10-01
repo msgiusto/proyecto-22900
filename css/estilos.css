@@ -6,6 +6,12 @@
     font-family: 'Teko', sans-serif;
 */
 /* Todos los nombres en camelCase*/
+* {
+  Margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header {
   height: 15vh;
   background-image: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
@@ -17,7 +23,7 @@
   font-weight: bold;
 }
 
-li {
+.li {
   display: inline;
 }
 
@@ -25,19 +31,22 @@ a {
   text-decoration: unset;
 }
 
-nav {
+.nav {
   text-align: right;
   /* Separo los links del nav del borde superior */
   padding-top: 10px;
 }
 
-nav a {
-  text-decoration: unset;
+.nav_a {
   color: black;
   font-size: 18px;
   font-family: "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* Separo los enlaces del nav entre si y del costado */
-  margin: 10px;
+}
+
+.nav-link:hover
+{
+  color: darkblue !important;
+  font-style: italic;
 }
 
 footer {
@@ -81,7 +90,7 @@ footer div {
 /* Estilos para los párrafos */
 .parrafoInicio {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #dddd1f;
+  color: white;
   text-align: justify;
 }
 
@@ -95,13 +104,53 @@ footer div {
 /* Se agregan imagenes de fondo en Secciones de inicio.*/
 .fondoSeccion, .fondoSeccion--estudio, .fondoSeccion--novedades, .fondoSeccion--proyectos {
   height: 25vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  display:inline-block;
+  position:relative;
+  overflow: hidden;
+  margin-bottom: -6px;
+}
+
+.fondoSeccion--estudio:hover
+{
+  /* background-color: rgb(128, 128, 128, 0.25);
+  color: green; */
+  opacity: 0.2;
+  
+  transition: 500ms;
+  /* z-index: -12; */
+  /* overflow: hidden; */
+}
+
+.fondoSeccion--novedades:hover
+{
+  filter: blur(3px);
+  color: white;
+  font-weight: bold;
+  z-index: -1;
+}
+
+.centrarEnCuadrado:hover
+{
+}
+
+.fondoSeccion--proyectos:hover
+{  
+  filter: sepia(200%);
+  color: black;
+  font-weight: bold;
+  transition: 1s;
 }
 
 .fondoSeccion--estudio {
-  background-image: url("../imagenes/inicio/estudio.jpeg");
+  /* background-image: url("../imagenes/inicio/estudio.jpeg"); */
+  /* background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover; */
+  width: 100%;
+  height: auto;
+  /* object-fit: none; */
+  /* overflow: hidden; */
+  /* height: 100%; */
 }
 
 .fondoSeccion--novedades {
@@ -109,7 +158,7 @@ footer div {
 }
 
 .fondoSeccion--proyectos {
-  background-image: url("../imagenes/inicio/proyectos.jpeg");
+  /* background-image: url("../imagenes/inicio/proyectos.jpeg"); */
 }
 
 .logo {
@@ -127,14 +176,24 @@ footer div {
 
 .centrarEnCuadrado {
   text-align: center;
-  padding-top: 4%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  padding:10px;
+  margin:0;
+  background-color: rgb(128, 128, 128, 0.9);
+  align-items: center;
 }
+
+
 
 /* Estilos para estudio */
 .estudio__main {
   background-image: url(../videos/fondo-estudio.gif);
   background-repeat: no-repeat;
-  background-position-x: center;
+  background-position-x: left;
   background-attachment: fixed;
 }
 
@@ -145,14 +204,21 @@ footer div {
 
 .div__estudio__destacado {
   font-size: 20px;
-  background-color: #bde775;
-  opacity: 0.5;
+  background-color: rgb(189,231,117,0.5); /*#bde775; */
+  /* opacity: 0.5; */
 }
 
-* {
-  Margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.bg-light
+{
+  background: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
+}
+
+.hIgualPadre{
+  height: 100%;
+}
+
+.hIgualPadre2{
+  height: 100%;
 }
 
 /* ************ Mobile First ************ */
@@ -187,14 +253,31 @@ footer div {
     width: 100%;
     overflow: hidden;
   }
-  .fondoSeccion--proyectos {
+  .fondoProyectosM {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .fondoSeccion--estudio {
+
+    
+    width: auto;
+    height: 100%;
   }
   .centrarEnCuadrado {
     text-align: center;
     padding-top: 4%;
   }
+
+  .traerAlFrente{
+    z-index: +1;
+  }
+
+  .hIgualPadre2{
+    background-image: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
+    height: auto;
+    align-content: flex-start;
+  }
+
   /* A partir del uso de Bootstrap*/
   /* Corrijo los tamaños del texto */
   /* Corrijo los margin-bottom para que los bordes queden pegados */

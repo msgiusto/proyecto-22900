@@ -21,21 +21,35 @@
     <meta name="keywords" content="MAS, Arquitectura, Proyectos, Edificios, Remodelaciones, Obras, Casas, Clasico, Moderno">
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="proyectos.html"> Proyectos </a></li>
-                <li><a href="novedades.html"> Novedades </a></li>
-                <li><a href="estudio.html"> Estudio </a></li>
-                <li><a href="contacto.html"> Contacto </a></li>
-            </ul>
+    <header class="header container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light bg-light p-0 hIgualPadre">
+            <div class="container-fluid p-0 traerAlFrente hIgualPadre">
+
+                <img src="/imagenes/logo/logo_sin_fondo.png" class="col-md-1 col-3 p-0 mt-md-0 hIgualPadre" style="height:100%; width: auto;" alt="logo">
+                
+                <h1 class="header__titulo col-md-5 col-6 mb-0 mt-md-2 ps-md-4"><a href="index.html"> MAS Arquitectura </a></h1>
+
+                <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="d-md-flex flex-md-row-reverse align-self-md-start ps-4 pt-2 collapse navbar-collapse col-md-4 hIgualPadre2" id="navbarNavAltMarkup">
+                    <div class="navbar-nav nav_a d-md-flex align-self-md-start parrafoInicio">
+                        <a class="nav-link active pt-0 " href="index.html">Inicio</a>
+                        <a class="nav-link active pt-0" href="proyectos.html">Proyectos</a>
+                        <a class="nav-link active pt-0" href="novedades.html">Novedades</a>
+                        <a class="nav-link active pt-0" href="estudio.html">Estudio</a>
+                        <a class="nav-link active pt-0" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+
+            </div>
+
         </nav>
-        <h1 class="header__titulo"><a href="index.html"> MAS Arquitectura </a></h1>
     </header>
     <main class="container">
         <!--- Contacto --->
-        <h2 class="h2">Contacto</h2>
+        <h2 class="h2 mt-2">Contacto</h2>
 
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem numquam itaque provident. Vero!</p>
 
@@ -58,12 +72,20 @@
         </form>
     </main>
     <footer>
-        <!-- Agrego los íconos de las redes sociales así que saco la leyenda redundante
-        <span>Redes Sociales</span> -->
-        <div>
-            <a href="" class="rotacionIconoRedSocial"><img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"/></a>
-            <a href="" class="rotacionIconoRedSocial"><img src="https://img.icons8.com/ios/50/000000/facebook--v1.png"/></a>
-            <a href="" class="rotacionIconoRedSocial"><img src="https://img.icons8.com/ios/48/000000/whatsapp--v1.png"/></a>
+        <!-- Agrego los íconos de las redes sociales -->
+        <div class="container-fluid">
+            <div class="col-md-10">
+                <a href="https://www.instagram.com/" target="_blank" class="rotacionIconoRedSocial"><img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"/></a>
+
+                <a href="https://www.facebook.com/" target="_blank" class="rotacionIconoRedSocial"><img src="https://img.icons8.com/ios/50/000000/facebook--v1.png"/></a>
+
+                <a href="https://api.whatsapp.com/send?phone=+5491144445555" target="_blank" class="rotacionIconoRedSocial"><img src="https://img.icons8.com/ios/48/000000/whatsapp--v1.png"/></a>
+            </div>
+            
+            <div class="col-md-2 d-flex align-self-end justify-content-end">
+                <span class="align-self-md-end fs-6 fw-light text-muted">© 2021 Maxi Giusto</span>
+            </div>
+            
         </div>
     </footer>
 
