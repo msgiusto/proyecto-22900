@@ -1,4 +1,4 @@
-// Codigo correspondiente a los header
+// Codigo correspondiente a los header y el reset
 
 *
 {
@@ -19,33 +19,27 @@
     }
 }
 
-li
-{
-    display: inline;
-} 
-
 a
 {
     text-decoration: unset;
 }
 
-nav
+.nav_a
 {
-    text-align: right;
-    /* Separo los links del nav del borde superior */
-    padding-top: 10px;
-    a
-    {
-        text-decoration: unset;
-        color: black;
-        font-size: 18px;
-        font-family: $fuente-nav;
-        /* Separo los enlaces del nav entre si y del costado */
-        margin: 10px;
-    }
+    text-decoration: unset;
+    color: black;
+    font-size: 18px;
+    font-family: $fuente-nav;
+    margin: 10px;
 }
 
 .bg-light
 {
   background: $gradiente-principal;
+}
+
+.nav-link:hover
+{
+  color: $color-titulo-ppal !important;
+  font-style: italic;
 }

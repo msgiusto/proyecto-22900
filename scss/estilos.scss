@@ -15,57 +15,39 @@
 /* ************ Mobile First ************ */
 @media (max-width: 768px)
 {
-    h1
-    {
-        font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
-        /* font-style: italic; */
-        color: darkblue;
-        text-align: center;
-        /*padding-top: 7%;*/
-    }
-
-    li
-    {
-        display: inline;
-        /* display: inline-block; */
-        width: 10%;
-        text-align: center;
-        /*font-size: 14px*/
-    }
-
-    nav
-    {
-        text-align: center;
-        /* Separo los links del nav del borde superior */
-        padding-top: 10px;
-    }
-
     nav a
     {
         font-size: 16px;
     }
-
-    /* Modifico para que quede uno abajo del otro*/
-    .bordesInicio
-    {
-        display: block;
-        border: solid 3px black;
-        height: 50%;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .fondoSeccion--proyectos
+    
+    .fondoProyectosMF 
     {
         display: flex;
         flex-direction: column-reverse;
-
     }
-    
-    .centrarEnCuadrado
+
+    .fondoSeccion--imagen 
+    {
+        width: auto;
+        height: 100%;
+    }
+
+    .centrarEnCuadrado 
     {
         text-align: center;
         padding-top: 4%;
+    }
+
+    .traerAlFrente
+    {
+        z-index: +1;
+    }
+
+    .hIgualPadreMF
+    {
+        background-image: $gradiente-principal;
+        height: auto;
+        align-content: flex-start;
     }
 
     /* A partir del uso de Bootstrap*/

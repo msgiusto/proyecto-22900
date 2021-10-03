@@ -5,7 +5,7 @@
 .h2
 {
     font-family: $fuente-h23;
-    color: blue;
+    color: $color-h2;
 }
 
 .h3
@@ -26,73 +26,72 @@
     text-align: justify;
 }
 
-.parrafoProyectos
-{
-    font-family: $fuente-p-inicio;
-    color: black;
-    text-align: justify;
-}
-
 /* Estilos para el inicio */
-/* Se agregan imagenes de fondo en Secciones de inicio.*/
 
 .fondoSeccion
 {
     height: 25vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-@each $i in estudio, novedades, proyectos
-{
-    .fondoSeccion--#{$i}
-    {
-        @extend .fondoSeccion;
-        background-image: url("../imagenes/inicio/#{$i}.jpeg");
-    }
-}
-
-.logo
-{
-    height: 100%;
-}
-
-/* Le pongo bordes a las secciones para que queden como en el sketch */
-
-.bordesInicio
-{
-    display: inline-block;
-    border: solid 5px $color-borde-inicio;
-    height: 100%; /* Ocupa el 100% el padre*/
+    display:inline-block;
+    position:relative;
     overflow: hidden;
+    margin-bottom: -6px;
+}
+
+.fondoSeccion--imagen
+{
+    @extend .fondoSeccion;
+    width: 100%;
+    height: auto;
+}
+
+.fondoSeccion--imagen:hover
+{
+    opacity: 0.2; 
+    transition: 500ms;
 }
 
 .centrarEnCuadrado
 {
     text-align: center;
-    padding-top: 4%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    padding:10px;
+    margin:0;
+    background-color: $color-transparencia-inicio;
+    align-items: center;
 }
 
 /* Estilos para estudio */
 
 .estudio__main
 {
-  background-image: $gif-fondo-estudio;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-attachment: fixed;
+    background-image: $gif-fondo-estudio;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-attachment: fixed;
 }
 
 .estudio__parrafo
 {
-  font-weight: bold;
-  font-size: 20px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .div__estudio__destacado
 {
-  font-size: 20px;
-  background-color: $color-cuadroChico-estudio;
-  opacity: 0.5;
+    font-size: 20px;
+    background-color: $color-cuadroChico-estudio;
+}
+
+.hIgualPadre
+{
+    height: 100%;
+}
+  
+.hIgualPadreMF
+{
+    height: 100%;
 }

@@ -23,28 +23,23 @@
   font-weight: bold;
 }
 
-.li {
-  display: inline;
-}
-
 a {
   text-decoration: unset;
 }
 
-.nav {
-  text-align: right;
-  /* Separo los links del nav del borde superior */
-  padding-top: 10px;
-}
-
 .nav_a {
+  text-decoration: unset;
   color: black;
   font-size: 18px;
   font-family: "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 10px;
 }
 
-.nav-link:hover
-{
+.bg-light {
+  background: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
+}
+
+.nav-link:hover {
   color: darkblue !important;
   font-style: italic;
 }
@@ -94,100 +89,37 @@ footer div {
   text-align: justify;
 }
 
-.parrafoProyectos {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-  text-align: justify;
-}
-
 /* Estilos para el inicio */
-/* Se agregan imagenes de fondo en Secciones de inicio.*/
-.fondoSeccion, .fondoSeccion--estudio, .fondoSeccion--novedades, .fondoSeccion--proyectos {
+.fondoSeccion, .fondoSeccion--imagen {
   height: 25vh;
-  display:inline-block;
-  position:relative;
+  display: inline-block;
+  position: relative;
   overflow: hidden;
   margin-bottom: -6px;
 }
 
-.fondoSeccion--estudio:hover
-{
-  /* background-color: rgb(128, 128, 128, 0.25);
-  color: green; */
-  opacity: 0.2;
-  
-  transition: 500ms;
-  /* z-index: -12; */
-  /* overflow: hidden; */
-}
-
-.fondoSeccion--novedades:hover
-{
-  filter: blur(3px);
-  color: white;
-  font-weight: bold;
-  z-index: -1;
-}
-
-.centrarEnCuadrado:hover
-{
-}
-
-.fondoSeccion--proyectos:hover
-{  
-  filter: sepia(200%);
-  color: black;
-  font-weight: bold;
-  transition: 1s;
-}
-
-.fondoSeccion--estudio {
-  /* background-image: url("../imagenes/inicio/estudio.jpeg"); */
-  /* background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover; */
+.fondoSeccion--imagen {
   width: 100%;
   height: auto;
-  /* object-fit: none; */
-  /* overflow: hidden; */
-  /* height: 100%; */
 }
 
-.fondoSeccion--novedades {
-  background-image: url("../imagenes/inicio/novedades.jpeg");
-}
-
-.fondoSeccion--proyectos {
-  /* background-image: url("../imagenes/inicio/proyectos.jpeg"); */
-}
-
-.logo {
-  height: 100%;
-}
-
-/* Le pongo bordes a las secciones para que queden como en el sketch */
-.bordesInicio {
-  display: inline-block;
-  border: solid 5px #b69b69;
-  height: 100%;
-  /* Ocupa el 100% el padre*/
-  overflow: hidden;
+.fondoSeccion--imagen:hover {
+  opacity: 0.2;
+  transition: 500ms;
 }
 
 .centrarEnCuadrado {
   text-align: center;
   height: 100%;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:-1;
-  padding:10px;
-  margin:0;
-  background-color: rgb(128, 128, 128, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 10px;
+  margin: 0;
+  background-color: #80808e;
   align-items: center;
 }
-
-
 
 /* Estilos para estudio */
 .estudio__main {
@@ -204,62 +136,27 @@ footer div {
 
 .div__estudio__destacado {
   font-size: 20px;
-  background-color: rgb(189,231,117,0.5); /*#bde775; */
-  /* opacity: 0.5; */
+  background-color: #bde775;
 }
 
-.bg-light
-{
-  background: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
-}
-
-.hIgualPadre{
+.hIgualPadre {
   height: 100%;
 }
 
-.hIgualPadre2{
+.hIgualPadreMF {
   height: 100%;
 }
 
 /* ************ Mobile First ************ */
 @media (max-width: 768px) {
-  h1 {
-    font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
-    /* font-style: italic; */
-    color: darkblue;
-    text-align: center;
-    /*padding-top: 7%;*/
-  }
-  li {
-    display: inline;
-    /* display: inline-block; */
-    width: 10%;
-    text-align: center;
-    /*font-size: 14px*/
-  }
-  nav {
-    text-align: center;
-    /* Separo los links del nav del borde superior */
-    padding-top: 10px;
-  }
   nav a {
     font-size: 16px;
   }
-  /* Modifico para que quede uno abajo del otro*/
-  .bordesInicio {
-    display: block;
-    border: solid 3px black;
-    height: 50%;
-    width: 100%;
-    overflow: hidden;
-  }
-  .fondoProyectosM {
+  .fondoProyectosMF {
     display: flex;
     flex-direction: column-reverse;
   }
-  .fondoSeccion--estudio {
-
-    
+  .fondoSeccion--imagen {
     width: auto;
     height: 100%;
   }
@@ -267,17 +164,14 @@ footer div {
     text-align: center;
     padding-top: 4%;
   }
-
-  .traerAlFrente{
+  .traerAlFrente {
     z-index: +1;
   }
-
-  .hIgualPadre2{
+  .hIgualPadreMF {
     background-image: linear-gradient(to right, #d8e08d, #a2c88f, #93bf8c);
     height: auto;
     align-content: flex-start;
   }
-
   /* A partir del uso de Bootstrap*/
   /* Corrijo los tamaños del texto */
   /* Corrijo los margin-bottom para que los bordes queden pegados */
